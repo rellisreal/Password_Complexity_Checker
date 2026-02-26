@@ -34,14 +34,13 @@ int main() {
         if (strchr(numericValues, password[i])) {hasNumeric=1;}
         if (strchr(symbolicValues, password[i])) {hasSymbol=1;}
     }
+    free(password);
     if (hasCaps==1 && hasNumeric==1 && hasSymbol==1) {
         printf("Password Complexity Passed: %s", password);
-        free(password);
         return 0; 
     }
     else {
         printf("Password Complexity Failed: %s", password);
-        free(password);
         return 1; 
     }
 }
