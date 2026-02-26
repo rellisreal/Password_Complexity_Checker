@@ -9,7 +9,7 @@ int main() {
     const char numericValues[] = "1234567890";
     const char symbolicValues[] = "!@#$%^&*()_+-=;'[],.<>/:";
     char buffer[1000];
-    char* password;
+    char *password;
     int i; 
     int hasCaps = 0;
     int hasNumeric = 0; 
