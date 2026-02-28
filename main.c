@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "main.h"
+#include "logger/logger.h"
 
 int main() {
     const char capitalValues[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -15,6 +12,7 @@ int main() {
     int hasNumeric = 0; 
     int hasSymbol= 0; 
     
+    log_message("Starting Application");
     printf("\nRequirements: 8+ Charachters\n-Numeric Charachter \n-Capital Chara \nPlease insert a password: ");
     scanf("%999s", buffer);
     if (strlen(buffer) < 8) {
@@ -38,6 +36,18 @@ int main() {
     if (hasCaps==1 && hasNumeric==1 && hasSymbol==1) {
         printf("Password Complexity Test Passed\n");
         return 0; 
+    }
+    else if (hasCaps==0) {
+        printf("Please add a capital charachter\n");
+        return 1;
+    }
+    else if (hasNumeric==0) {
+        printf("Please add a Numeric charachter\n");
+        return 1;
+    }
+    else if (hasSymbol==0) {
+        printf("Please add a Symbolic charachter\n");
+        return 1;
     }
     else {
         printf("Password Complexity Test Failed\n");
