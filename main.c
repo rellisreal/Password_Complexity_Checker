@@ -11,10 +11,10 @@ int main() {
     char *password;
 
     log_message("Starting Application");
-    printf("\nRequirements: 8+ Charachters\n-Numeric Charachter \n-Capital Chara \nPlease insert a password: ");
+    printf("\nRequirements: 8+ Characters\n-Numeric Charachter \n-Capital Chara \nPlease insert a password: ");
     scanf("%999s", buffer);
     if (strlen(buffer) < 8) {
-        printf("Password Complexity Failed (Needs to be more than 8 charachters): %s", buffer);
+        printf("Password Complexity Failed (Needs to be more than 8 characters): %s", buffer);
         return 1; 
     };
     password = malloc(strlen(buffer) + 1);
