@@ -1,7 +1,5 @@
 #include "main.h"
 #include "logger/logger.h"
-#include <iso646.h>
-#include <stdio.h>
 
 int main() {
     const char capitalValues[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
